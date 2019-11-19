@@ -10,6 +10,7 @@ else:
 if sys.version_info >= (3, 6):
     AnnAssign = ast.AnnAssign
 else:
+
     class AnnAssign:
         pass
 
