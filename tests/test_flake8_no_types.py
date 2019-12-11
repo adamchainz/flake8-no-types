@@ -44,6 +44,18 @@ def test_NT001_fail_variable_declaration(flake8dir):
     assert result.out_lines == ["./example.py:1:1: NT001 No type hints."]
 
 
+@python_3_6_plus
+def test_NT001_fail_class_variable_declaration(flake8dir):
+    flake8dir.make_example_py(
+        """
+        class Foo:
+            bar: int
+        """
+    )
+    result = flake8dir.run_flake8()
+    assert result.out_lines == ["./example.py:2:5: NT001 No type hints."]
+
+
 def test_NT001_fail_function_arguments(flake8dir):
     flake8dir.make_example_py(
         """
