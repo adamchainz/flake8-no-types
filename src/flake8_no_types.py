@@ -15,7 +15,7 @@ else:
         pass
 
 
-class NoTypesChecker(object):
+class NoTypesChecker:
     """
     A flake8 plugin to ban type hints.
     """
