@@ -14,7 +14,8 @@ python_3_6_plus = pytest.mark.skipif(sys.version_info < (3, 6), reason="Python 3
 def test_version(flake8dir):
     result = flake8dir.run_flake8(["--version"])
     version_string = "flake8-no-types: " + version("flake8-no-types")
-    assert version_string in result.out_lines[0]
+    unwrapped = ''.join(result.out_lines)
+    assert version_string in unwrapped
 
 
 # NT001
