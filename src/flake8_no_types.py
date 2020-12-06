@@ -7,14 +7,6 @@ else:
     from importlib_metadata import version
 
 
-if sys.version_info >= (3, 6):
-    AnnAssign = ast.AnnAssign
-else:
-
-    class AnnAssign:
-        pass
-
-
 class NoTypesChecker:
     """
     A flake8 plugin to ban type hints.
@@ -31,7 +23,7 @@ class NoTypesChecker:
     def run(self):
         for node in ast.walk(self.tree):
             if (
-                isinstance(node, AnnAssign)
+                isinstance(node, ast.AnnAssign)
                 or (isinstance(node, ast.arg) and node.annotation is not None)
                 or (isinstance(node, ast.FunctionDef) and node.returns is not None)
             ):
