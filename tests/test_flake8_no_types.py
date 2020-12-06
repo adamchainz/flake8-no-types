@@ -1,15 +1,10 @@
 import re
 import sys
 
-import pytest
-
 if sys.version_info >= (3, 8):
     from importlib.metadata import version
 else:
     from importlib_metadata import version
-
-
-python_3_6_plus = pytest.mark.skipif(sys.version_info < (3, 6), reason="Python 3.6+")
 
 
 def test_version(flake8dir):
@@ -39,14 +34,12 @@ def test_NT001_pass_function(flake8dir):
     assert result.out_lines == []
 
 
-@python_3_6_plus
 def test_NT001_fail_variable_declaration(flake8dir):
     flake8dir.make_example_py("foo: int = 1")
     result = flake8dir.run_flake8()
     assert result.out_lines == ["./example.py:1:1: NT001 No type hints."]
 
 
-@python_3_6_plus
 def test_NT001_fail_class_variable_declaration(flake8dir):
     flake8dir.make_example_py(
         """
