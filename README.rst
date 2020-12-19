@@ -17,9 +17,7 @@ flake8-no-types
 
 A `flake8 <https://flake8.readthedocs.io/en/latest/index.html>`_ plugin to ban type hints.
 
-This can be useful in code bases where you aren't running type checking (yet?)
-but developers or their IDE's keep adding type hints that can end up being
-incorrect.
+This can be useful in code bases where you aren't running type checking (yet?) but developers or their IDE's add type hints that can be incorrect.
 
 Requirements
 ============
