@@ -2,7 +2,7 @@
 flake8-no-types
 ===============
 
-.. image:: https://img.shields.io/github/workflow/status/adamchainz/flake8-no-types/CI/master?style=for-the-badge
+.. image:: https://img.shields.io/github/workflow/status/adamchainz/flake8-no-types/CI/main?style=for-the-badge
    :target: https://github.com/adamchainz/flake8-no-types/actions?workflow=CI
 
 .. image:: https://img.shields.io/pypi/v/flake8-no-types.svg?style=for-the-badge
