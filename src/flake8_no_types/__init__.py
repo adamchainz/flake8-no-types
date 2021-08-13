@@ -1,5 +1,6 @@
 import ast
 import sys
+from typing import Any, Generator, Tuple, Type
 
 if sys.version_info >= (3, 8):
     from importlib.metadata import version
@@ -15,12 +16,12 @@ class NoTypesChecker:
     name = "flake8-no-types"
     version = version("flake8-no-types")
 
-    def __init__(self, tree, *args, **kwargs):
+    def __init__(self, tree: ast.AST) -> None:
         self.tree = tree
 
     message_NT001 = "NT001 No type hints."
 
-    def run(self):
+    def run(self) -> Generator[Tuple[int, int, str, Type[Any]], None, None]:
         for node in ast.walk(self.tree):
             if (
                 isinstance(node, ast.AnnAssign)
