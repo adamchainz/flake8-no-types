@@ -2,6 +2,8 @@
 History
 =======
 
+* Add type hints (ironically).
+
 1.2.0 (2021-05-10)
 ------------------
 
