@@ -2,6 +2,9 @@
 History
 =======
 
+1.3.0 (2021-10-11)
+------------------
+
 * Support Flake8 4.
 
 * Add type hints (ironically).
