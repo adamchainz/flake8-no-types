@@ -33,14 +33,8 @@ First, install with ``pip``:
 
      python -m pip install flake8-no-types
 
-Second, add the ``NT`` prefix to your Flake8 select list.
-For example, you can do this with `extend-select <https://flake8.pycqa.org/en/latest/user/options.html#cmdoption-flake8-extend-select>`__ in ``setup.cfg``:
-
-.. code-block:: ini
-
-    [flake8]
-    extend-select =
-        NT
+Second, if you define Flake8’s ``select`` setting, add the ``NT`` prefix to it.
+Otherwise, the plugin should be active by default.
 
 ----
 
