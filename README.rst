@@ -22,7 +22,7 @@ This can be useful in code bases where you aren't running type checking (yet?) b
 Requirements
 ============
 
-Python 3.6 to 3.10 supported.
+Python 3.7 to 3.10 supported.
 
 Installation
 ============
