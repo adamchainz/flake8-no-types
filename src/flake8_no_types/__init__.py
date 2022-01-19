@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import ast
 import sys
-from typing import Any, Generator, Tuple, Type
+from typing import Any, Generator
 
 if sys.version_info >= (3, 8):
     from importlib.metadata import version
@@ -21,7 +23,7 @@ class NoTypesChecker:
 
     message_NT001 = "NT001 No type hints."
 
-    def run(self) -> Generator[Tuple[int, int, str, Type[Any]], None, None]:
+    def run(self) -> Generator[tuple[int, int, str, type[Any]], None, None]:
         for node in ast.walk(self.tree):
             if (
                 isinstance(node, ast.AnnAssign)
