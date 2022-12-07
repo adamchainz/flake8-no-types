@@ -15,6 +15,14 @@ flake8-no-types
    :target: https://github.com/pre-commit/pre-commit
    :alt: pre-commit
 
+Unmaintained (2022-12-07)
+-------------------------
+
+I stopped maintaining this package as it has never been popular.
+Also, it isn’t really practical to ban all type hints, since tools like ``dataclasses`` use them at runtime.
+
+----
+
 A `flake8 <https://flake8.readthedocs.io/en/latest/index.html>`_ plugin to ban type hints.
 
 This can be useful in code bases where you aren't running type checking (yet?) but developers or their IDE's add type hints that can be incorrect.
